@@ -23,11 +23,3 @@ def test_production_config(test_app):
     assert test_app.config['SECRET_KEY'] == 'my_precious'
     assert not test_app.config['TESTING']
     assert test_app.config['SQLALCHEMY_DATABASE_URI'] == os.environ.get('DATABASE_URL')
-class BaseConfig:
-    TESTING = False
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SECRET_KEY = 'my_precious'  # new
-class BaseConfig:
-    TESTING = False
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SECRET_KEY = 'my_precious'  # new
